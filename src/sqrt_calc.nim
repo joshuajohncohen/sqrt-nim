@@ -42,7 +42,6 @@ proc squareRoot(n: int64, precision: int64): string =
     while (float64(numerator).pow(2) + float64(1)) < float64(float64(n) * float64(denominator).pow(2)):
       numerator += 1
 
-    echo numerator, " ", denominator
     decimalResult += (newDecimal(numerator) / newDecimal(denominator))
     numDigits += 1
     numerator = int64(-1)
