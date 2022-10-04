@@ -29,6 +29,7 @@ proc squareRoot(n: DecimalType, precision: DecimalType): DecimalType =
   while numDigits < precision:
     while (numerator + dec1).squared() < n * dec10.pow(numDigits * dec2):
       numerator += 1
+      echo numerator
 
     numerator *= 10
     numDigits += dec1
